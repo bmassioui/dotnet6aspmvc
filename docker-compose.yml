@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  moviesmanagement.webapp:
+    image: ${DOCKER_REGISTRY-}moviesmanagementwebapp
+    build:
+      context: .
+      dockerfile: src/MoviesManagement.WebApp/Dockerfile
