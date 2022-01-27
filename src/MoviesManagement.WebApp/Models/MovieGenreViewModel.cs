@@ -1,0 +1,11 @@
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace MoviesManagement.WebApp.Models;
+
+public class MovieGenreViewModel
+{
+    public List<Movie>? Movies { get; set; }
+    public SelectList? Genres { get; set; }
+    public string? MovieGenre { get; set; }
+    public string? MovieTitle { get; set; }
+}
