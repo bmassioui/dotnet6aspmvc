@@ -1,8 +1,16 @@
 version: '3.4'
 
 services:
+  moviesmanagementdb:
+    image: mcr.microsoft.com/mssql/server
   moviesmanagement.webapp:
     image: ${DOCKER_REGISTRY-}moviesmanagementwebapp
     build:
       context: .
       dockerfile: src/MoviesManagement.WebApp/Dockerfile
+  portainer:
+    image: portainer/portainer-ce
+
+volumes:
+  portainer_data: null
+
